@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simulación de Tráfico</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('Fondo.jpg') no-repeat center center fixed; 
+            background-size: cover;
+        }
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            text-align: center; 
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="datetime-local"] {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center; 
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Simulación de Tráfico</h1>
+        <img src="Carretera.gif" alt="Carretera">
+        <div class="form-group">
+            <label for="start">Fecha y hora de inicio de simulación:</label>
+            <input type="datetime-local" id="start" name="start">
+        </div>
+        <div class="form-group">
+            <label for="end">Fecha y hora de fin de simulación:</label>
+            <input type="datetime-local" id="end" name="end">
+        </div>
+        <button onclick="runSimulation()">Iniciar Simulación</button>
+        <div id="result"></div>
+    </div>
+    <script src="simulacion.js"></script>
+</body>
+</html>
